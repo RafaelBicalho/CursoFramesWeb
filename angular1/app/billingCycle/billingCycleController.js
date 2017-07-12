@@ -14,7 +14,7 @@
                 vm.billingCycle = {}
                 msgs.addSuccess('Operação realizada com sucesso!')
             }).catch(function(response){
-                msgs.addError(data.errors)
+                msgs.addError(response.data.errors)
             })
         }
     }
