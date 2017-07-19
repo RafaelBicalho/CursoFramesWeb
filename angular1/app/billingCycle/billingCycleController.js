@@ -5,6 +5,7 @@
         BillingCycleController
     ])
 
+
     function BillingCycleController($http, msgs){
         const vm = this
 
