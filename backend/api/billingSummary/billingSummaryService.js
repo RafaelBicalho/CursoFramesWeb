@@ -12,7 +12,7 @@ function getSummary (req,res) {
           if(error) {
             res.status(500).json({errors: [error]})
           } else {
-            res.json(_.defaults(result[0] ,{credit: 0 ,debt: 0 }))
+            res.json(_.defaults(result[0] ,{credit: 1 ,debt: 2 }))
           }
         })
     }
