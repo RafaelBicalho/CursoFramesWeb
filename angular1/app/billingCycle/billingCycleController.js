@@ -13,6 +13,7 @@
         vm.refresh = function(){
             $http.get(url).then(function(response){
 <<<<<<< HEAD
+<<<<<<< HEAD
                 vm.billingCycle = {}
                 vm.billingCycles = response.data
 =======
@@ -20,6 +21,10 @@
                 vm.billingCycles = response.data
                 vm.calculateValues()
 >>>>>>> parent of e98c815... sdsaaddas
+=======
+                vm.billingCycle = {}
+                vm.billingCycles = response.data
+>>>>>>> parent of 76ac509... Merge pull request #2 from RafaelBicalho/v090817
                 tabs.show(vm, {tabList: true, tabCreate: true })
             })
         }
@@ -36,14 +41,18 @@
         vm.showTabUpdate = function(billingCycle){
               vm.billingCycle = billingCycle
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                initCreditsAndDebts()
               vm.calculateValues()
 >>>>>>> parent of e98c815... sdsaaddas
+=======
+>>>>>>> parent of 76ac509... Merge pull request #2 from RafaelBicalho/v090817
               tabs.show( vm, {tabUpdate:true})
           }
             vm.showTabDelete = function(billingCycle){
                   vm.billingCycle = billingCycle
+<<<<<<< HEAD
 <<<<<<< HEAD
                   tabs.show( vm, {tabDelete:true})
               }
@@ -64,11 +73,17 @@
               }
 
 >>>>>>> parent of e98c815... sdsaaddas
+=======
+                  tabs.show( vm, {tabDelete:true})
+              }
+
+>>>>>>> parent of 76ac509... Merge pull request #2 from RafaelBicalho/v090817
               vm.delete = function() {
                 const deleteUrl = `${url}/${vm.billingCycle._id}`
                 $http.delete(deleteUrl,vm.billingCycle).then(function(response) {
                   vm.refresh()
                   msgs.addSuccess('Operacao realizada com sucesso!.')
+<<<<<<< HEAD
 <<<<<<< HEAD
                 }).catch(function(data) {
                   msgs.addError(data.errors)
@@ -142,6 +157,13 @@
                   }
                    }
 >>>>>>> parent of e98c815... sdsaaddas
+=======
+                }).catch(function(data) {
+                  msgs.addError(data.errors)
+                })
+              }
+
+>>>>>>> parent of 76ac509... Merge pull request #2 from RafaelBicalho/v090817
         vm.refresh()
     }
 })()
