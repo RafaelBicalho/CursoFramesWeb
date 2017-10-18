@@ -2,14 +2,11 @@
     angular.module('primeiraApp').controller('BillingCycleCtrl', [
         '$http',
         'msgs',
-        'tabs',
         BillingCycleController
     ])
 
-    function BillingCycleController($http, msgs, tabs){
-        const vm = this
-        const url = 'http://localhost:3003/api/billingCycles'
 
+<<<<<<< HEAD
         vm.refresh = function(){
             $http.get(url).then(function(response){
 <<<<<<< HEAD
@@ -28,15 +25,21 @@
                 tabs.show(vm, {tabList: true, tabCreate: true })
             })
         }
+=======
+    function BillingCycleController($http, msgs){
+        const vm = this
+>>>>>>> parent of afe1fbb... Merge pull request #1 from RafaelBicalho/v090817
 
         vm.create = function(){
+            const url = 'http://localhost:3003/api/billingCycles'
             $http.post(url, vm.billingCycle).then(function(response){
-                vm.refresh()
+                vm.billingCycle = {}
                 msgs.addSuccess('Operação realizada com sucesso!')
             }).catch(function(response){
                 msgs.addError(response.data.errors)
             })
         }
+<<<<<<< HEAD
 
         vm.showTabUpdate = function(billingCycle){
               vm.billingCycle = billingCycle
@@ -165,5 +168,7 @@
 
 >>>>>>> parent of 76ac509... Merge pull request #2 from RafaelBicalho/v090817
         vm.refresh()
+=======
+>>>>>>> parent of afe1fbb... Merge pull request #1 from RafaelBicalho/v090817
     }
 })()
