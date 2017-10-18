@@ -3,7 +3,7 @@ const BillingCycle  = require('../billingCycle/billingCycle')
 
 function getSummary (req,res) {
             BillingCycle.aggregate({
-            $project: {credit: {$sum: "$Credits.value"}, debt: {$sum: "$Debts.value"}}
+            $project: {credit: {$sum: "$credits.value"}, debt: {$sum: "$debts.value"}}
         }, {
           $group: {_id: null, credit: {$sum: "$credit"} , debt: {$sum: "$debt"}}
         },{
